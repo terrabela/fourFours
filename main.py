@@ -1,17 +1,49 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-import numpy as np
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import sys
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 
-# Press the green button in the gutter to run the script.
+class MainWindow(QMainWindow):
+    count = 0
+
+    def __init__(self, parent=None):
+        super(MainWindow, self).__init__(parent)
+        self.mdi = QMdiArea()
+        self.setCentralWidget(self.mdi)
+        bar = self.menuBar()
+
+        file = bar.addMenu("File")
+        file.addAction("New")
+        file.addAction("cascade")
+        file.addAction("Tiled")
+        file.triggered[QAction].connect(self.windowaction)
+        self.setWindowTitle("MDI demo")
+
+    def windowaction(self, q):
+        print("triggered")
+
+        if q.text() == "New":
+            MainWindow.count = MainWindow.count + 1
+            sub = QMdiSubWindow()
+            sub.setWidget(QTextEdit())
+            sub.setWindowTitle("subwindow" + str(MainWindow.count))
+            self.mdi.addSubWindow(sub)
+            sub.show()
+
+        if q.text() == "cascade":
+            self.mdi.cascadeSubWindows()
+
+        if q.text() == "Tiled":
+            self.mdi.tileSubWindows()
+
+
+def main():
+    app = QApplication(sys.argv)
+    ex = MainWindow()
+    ex.show()
+    sys.exit(app.exec_())
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
