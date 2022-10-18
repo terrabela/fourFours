@@ -17,6 +17,7 @@ class MainWindow(QMainWindow):
         file.addAction("New")
         file.addAction("cascade")
         file.addAction("Tiled")
+        file.addAction("Se&ttings...")
         file.triggered[QAction].connect(self.windowaction)
         self.setWindowTitle("MDI demo")
 
