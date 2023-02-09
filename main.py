@@ -42,10 +42,10 @@ class MainWindow(QMainWindow):
 
 def main():
     # Estah funcionando; ativar depois.
-    # app = QApplication(sys.argv)
-    # ex = MainWindow()
-    # ex.show()
-    # sys.exit(app.exec_())
+    app = QApplication(sys.argv)
+    ex = MainWindow()
+    ex.show()
+    sys.exit(app.exec_())
 
     # 1st sympy ex
     import sympy
