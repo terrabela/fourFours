@@ -3,6 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
+from ui_languages import Ui_LanguageDlg
 
 class MainWindow(QMainWindow):
     count = 0
@@ -39,6 +40,13 @@ class MainWindow(QMainWindow):
         if q.text() == "Tiled":
             self.mdi.tileSubWindows()
 
+        if q.text() == "Se&ttings...":
+            MainWindow.count = MainWindow.count + 1
+            sub = QMdiSubWindow()
+            sub.setWidget(Ui_LanguageDlg())
+            sub.setWindowTitle("subwindow" + str(MainWindow.count))
+            self.mdi.addSubWindow(sub)
+            sub.show()
 
 def main():
     # Estah funcionando; ativar depois.
