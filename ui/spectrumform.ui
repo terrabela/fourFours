@@ -20,7 +20,7 @@
       <bool>true</bool>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_9">
       <attribute name="title">
@@ -177,7 +177,16 @@
           <string>Quantity</string>
          </property>
          <layout class="QGridLayout" name="_4">
-          <property name="margin">
+          <property name="leftMargin">
+           <number>8</number>
+          </property>
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <property name="rightMargin">
+           <number>8</number>
+          </property>
+          <property name="bottomMargin">
            <number>8</number>
           </property>
           <property name="spacing">
