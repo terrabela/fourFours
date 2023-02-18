@@ -8,7 +8,7 @@ class LngDlg(QDialog, Ui_LanguageDlg):
     def __init__(self):
         super(LngDlg, self).__init__()
         self.setupUi(self)
-
+        self.setWindowTitle("Vamos customizar!!!")
         # serah aqui?
         # Como fazer o connect?
         # https://www.pythonguis.com/tutorials/pyside-dialogs/
