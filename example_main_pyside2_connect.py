@@ -11,7 +11,7 @@ class LngDlg(QDialog, Ui_LanguageDlg):
 
         # serah aqui?
         # Como fazer o connect?
-
+        # https://www.pythonguis.com/tutorials/pyside-dialogs/
 
 class MainWindow(QMainWindow):
     def __init__(self):
