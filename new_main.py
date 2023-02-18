@@ -1,4 +1,7 @@
 import sys
+
+# from PySide2.QtWidgets import QApplication
+
 from PySide2.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog
 
 # 2023-Fev-14
