@@ -19,6 +19,15 @@ from ui_maininterface_with_toolbar import Ui_MainInterfaceClass
 
 from ui_languages import Ui_LanguageDlg
 
+class LngDlg(QDialog, Ui_LanguageDlg):
+    def __init__(self):
+        super(LngDlg, self).__init__()
+        self.setupUi(self)
+        self.setWindowTitle("Vamos customizar!!!")
+        # serah aqui?
+        # Como fazer o connect?
+        # https://www.pythonguis.com/tutorials/pyside-dialogs/
+
 
 class MainWindow(QMainWindow, Ui_MainInterfaceClass):
 
@@ -42,20 +51,14 @@ class MainWindow(QMainWindow, Ui_MainInterfaceClass):
             print("OK!")
 
     def actionLanguage_triggered(self, s):
-        # lang_dlg = Ui_LanguageDlg("Interface languages")
-        lang_dlg = Ui_LanguageDlg()
-        # lang_dlg. okButton.clicked()
-        lang_dlg.setupUi(QDialog)
-        # se_ok = lang_dlg.okButton.clicked()
-        # if se_ok == Ui_LanguageDlg
-
-        # dlg = QMessageBox(self)
-        # dlg.setWindowTitle("I have a question!")
-        # dlg.setText("This is a simple dialog")
-        # button = dlg.exec_()
-
-        # if button == QMessageBox.Ok:
-        #     print("OK!")
+        langdlg = LngDlg()
+        langdlg.exec_()
+        # AQUI? como usar ????
+        if langdlg.accept():
+            print("Accepted!")
+        if langdlg.Rejected:
+            print("Rejected!")
+        print("OK!")
 
 app = QApplication(sys.argv)
 window = MainWindow()
