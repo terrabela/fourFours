@@ -83,14 +83,6 @@ def decode_string(str):
             li.append(ch)
     return li
 
-
-str_4444 = '4444'
-str_44q = '44q'
-str_qq = 'qq'
-
-operas_5 = '+-*/^'
-
-
 def is_list_valid(mixed):
     # The balance along the list must be > 0 for mixed to be evaluated
     balance = -1
@@ -176,38 +168,3 @@ def sorting_dict(dict_n, print_range):
         if print_range[0] <= sorted_dict.get(i) <= print_range[1]:
             print(i, sorted_dict.get(i))
     return sorted_dict
-
-faixa = [92,95]
-
-print('========================')
-dict_type_7 = make_a_values_dict(operas=operas_5, n_token_opers=3, str_numbers=str_4444)
-print('========================')
-dict_type_5 = make_a_values_dict(operas=operas_5, n_token_opers=2, str_numbers=str_44q)
-print('========================')
-sorting_dict(dict_type_7, faixa)
-print('========================')
-sorting_dict(dict_type_5, faixa)
-
-print('========================')
-dict_type_5_fa = make_a_values_dict(operas=operas_5, n_token_opers=2, str_numbers=str_44q,
-                                    with_fact=True)
-print('========================')
-sorting_dict(dict_type_5_fa, faixa)
-print('========================')
-dict_type_5_sqr = make_a_values_dict(operas=operas_5, n_token_opers=2, str_numbers=str_44q,
-                                     with_sqrt=True)
-print('========================')
-sorting_dict(dict_type_5_sqr, faixa)
-
-print('========================')
-dict_type_7_fa = make_a_values_dict(operas=operas_5, n_token_opers=3, str_numbers=str_4444,
-                                    with_fact=True)
-print('========================')
-sorting_dict(dict_type_7_fa, faixa)
-print('========================')
-dict_type_7_sqr = make_a_values_dict(operas=operas_5, n_token_opers=3, str_numbers=str_4444,
-                                     with_sqrt=True)
-print('========================')
-sorting_dict(dict_type_7_sqr, faixa)
-
-print('========== FIM ==================')
