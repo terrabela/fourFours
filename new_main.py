@@ -24,6 +24,16 @@ from PySide2.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog
 from ui_maininterface_with_toolbar import Ui_MainInterfaceClass
 
 from ui_languages import Ui_LanguageDlg
+# from ui_spectrumform import Ui_SpectrumForm
+from ui_spectrumform_with_ok_cancel import Ui_Dialog
+
+
+class SpecParms(QDialog, Ui_Dialog):
+
+    def __init__(self):
+        super(SpecParms, self).__init__()
+        self.setupUi(self)
+        self.setWindowTitle("Vamos customizar!!!")
 
 
 class LngDlg(QDialog, Ui_LanguageDlg):
@@ -56,7 +66,16 @@ class MainWindow(QMainWindow, Ui_MainInterfaceClass):
         # lang_dlg.okButton.clicked()
         # 2023-Fev-16 Defining custom signal/slots
         # self.actionLanguage.triggered.connect(self.button_clicked)
+        self.actionOpen.triggered.connect(self.open_spec_parms)
         self.actionLanguage.triggered.connect(self.actionLanguage_triggered)
+        self.action_Exit.triggered.connect(self.vai_sair)
+
+    def open_spec_parms(self):
+        spec_parms = SpecParms()
+        if spec_parms.exec_():
+            print('Viva!')
+        else:
+            print('Cancelou...')
 
     def actionLanguage_triggered(self, s):
         langdlg = LngDlg()
@@ -64,6 +83,10 @@ class MainWindow(QMainWindow, Ui_MainInterfaceClass):
             print("Success!")
         else:
             print("Cancel!")
+
+    def vai_sair(self):
+        print('Vai sair.')
+        QApplication.instance().closeAllWindows()
 
 
 app = QApplication(sys.argv)
