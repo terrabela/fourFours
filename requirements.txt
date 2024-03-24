@@ -1,4 +1,5 @@
-numpy
-scipy
+numpy~=1.26.4
+scipy~=1.12.0
 pandas
-pyside2
+plotly
+dash

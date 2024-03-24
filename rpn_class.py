@@ -83,6 +83,7 @@ def decode_string(str):
             li.append(ch)
     return li
 
+
 def is_list_valid(mixed):
     # The balance along the list must be > 0 for mixed to be evaluated
     balance = -1
