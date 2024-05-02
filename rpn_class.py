@@ -7,6 +7,7 @@
 
 import itertools
 import numpy as np
+import warnings
 from scipy.special import factorial
 
 
@@ -49,9 +50,16 @@ def evaluate_list(expression):
 
             elif ele == '^':
                 if right < 100:
-                    stack.append(left ** right)
+                    with warnings.catch_warnings() as warning_list:
+                        warnings.simplefilter("error", RuntimeWarning)
+                        stack.append(left ** right)
                 else:
                     stack.append(float('inf'))
+
+                if warning_list:
+                    for warning in warning_list:
+                        print(f"Warning: {warning.message}")  # Handle warnings as needed
+
 
             elif ele == '!':
                 if right < 100:
