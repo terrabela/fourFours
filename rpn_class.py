@@ -49,17 +49,16 @@ def evaluate_list(expression):
                     stack.append(float('inf'))
 
             elif ele == '^':
-                if right < 100:
-                    with warnings.catch_warnings() as warning_list:
-                        warnings.simplefilter("error", RuntimeWarning)
-                        stack.append(left ** right)
-                else:
-                    stack.append(float('inf'))
-
+                with warnings.catch_warnings() as warning_list:
+                    warnings.simplefilter("error", RuntimeWarning)
+                    stack.append(left ** right)
                 if warning_list:
                     for warning in warning_list:
                         print(f"Warning: {warning.message}")  # Handle warnings as needed
-
+                else:
+                    pass
+                # else:
+                #     stack.append(float('inf'))
 
             elif ele == '!':
                 if right < 100:
