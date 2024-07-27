@@ -1,15 +1,17 @@
 """
-Lumache - Python library for cooks and food lovers.
+Four fours - About the reacrePython library for cooks and food lovers.
 
 This is a Python docstring, we can use reStructuredText syntax here!
 
 .. code-block:: python
 
     # Import lumache
-    import lumache
+    # import lumache
+    import rpn_class
 
     # Call its only function
-    get_random_ingredients(kind=["cheeses"])
+    # get_random_ingredients(kind=["cheeses"])
+    def evaluate_list(expression):
 """
 
 __version__ = "0.1.0"
