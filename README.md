@@ -14,7 +14,7 @@ In the future it will use:
 
 ## Documentation
 
-- Under development at [Read the Docs](https://fourfours-docs.readthedocs.io)
+- Under development at [Read the Docs](https://fourfours.readthedocs.io)
 
 ## Screenshots
 
