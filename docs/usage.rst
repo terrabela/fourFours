@@ -6,36 +6,35 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+This application requires numpy, scipy, lmfit to
+perform all the Math.
+
+Running
+-------
+
+Open the Jupyter notebook:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   run_cmdline.ipynb
 
-Creating recipes
-----------------
+Alternatively, instantiate an object of the class
+``rpn_class()``.
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+.. code-block:: console
 
-.. autofunction:: lumache.get_random_ingredients
+   my_rpn = rpn_class()
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+.. autofunction:: rpn_class.evaluate_list
+
+The ``expression`` parameter should be a string
+containing a rpn (reverse Polish notation) expression.
+Otherwise, :py:func:`rpn_class.evaluate_list`
 will raise an exception.
 
-.. autoexception:: lumache.InvalidKindError
+.. autoexception:: rpn_class.InvalidKindError
 
 For example:
 
 >>> import fourfours
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
->>> import fourfours
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> rpn_class.evaluate_list("44+4*")
