@@ -11,7 +11,16 @@ import warnings
 from scipy.special import factorial
 
 
-def evaluate_list(expression):
+def evaluate_list(expression=None):
+    """
+    Evaluate a valid RPN (reverse Polish notation) in a string
+    
+    :param expression: a RPN as a string.
+    :type expression: str or None
+    :return: the arithmetic result of expression.
+    :rtype: float
+    
+    """
     # for expression already given as a list
     # stack
     stack = []

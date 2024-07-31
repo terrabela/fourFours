@@ -36,5 +36,7 @@ will raise an exception.
 
 For example:
 
+.. autofunction:: rpn_class.evaluate_list
+
 >>> import rpn_class
 >>> rpn_class.evaluate_list("44+4*")
