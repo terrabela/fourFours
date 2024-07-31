@@ -36,5 +36,5 @@ will raise an exception.
 
 For example:
 
->>> import fourfours
+>>> import rpn_class
 >>> rpn_class.evaluate_list("44+4*")
