@@ -32,8 +32,6 @@ containing a rpn (reverse Polish notation) expression.
 Otherwise, :py:func:`rpn_class.evaluate_list`
 will raise an exception.
 
-.. autoexception:: rpn_class.InvalidKindError
-
 For example:
 
 .. autofunction:: rpn_class.evaluate_list

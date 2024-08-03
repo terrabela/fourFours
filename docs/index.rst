@@ -2,7 +2,7 @@
 .. include:: ../README.rst
 
 Welcome to OGRaySpY's documentation!
-===================================
+====================================
 
 **four Fours** is a Python app for recreational
 mathematics.
