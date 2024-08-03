@@ -25,8 +25,6 @@ Alternatively, instantiate an object of the class
 
    my_rpn = rpn_class()
 
-.. autofunction:: rpn_class.evaluate_list
-
 The ``expression`` parameter should be a string
 containing a rpn (reverse Polish notation) expression.
 Otherwise, :py:func:`rpn_class.evaluate_list`
