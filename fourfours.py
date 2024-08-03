@@ -6,8 +6,6 @@ This is a Python docstring, we can use reStructuredText syntax here!
 .. code-block:: python
 
     import rpn_class
-
-    evaluate_list(expression):
 """
 
 __version__ = "0.1.0"
