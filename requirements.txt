@@ -4,4 +4,3 @@ sympy
 pandas
 plotly
 dash
-Pygments
