@@ -60,7 +60,10 @@ def evaluate_list(expression=None):
             elif ele == '^':
                 with warnings.catch_warnings() as warning_list:
                     warnings.simplefilter("error", RuntimeWarning)
-                    stack.append(left ** right)
+                    if right < 7:
+                        stack.append(left ** right)
+                    else:
+                        stack.append(float('inf'))
                 if warning_list:
                     for warning in warning_list:
                         print(f"Warning: {warning.message}")  # Handle warnings as needed
